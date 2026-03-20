@@ -48,6 +48,8 @@
 
         html { scroll-behavior: smooth; }
 
+        *, *::before, *::after { box-sizing: border-box; }
+
         body {
             background-color: var(--dark);
             color: var(--charcoal);
@@ -126,6 +128,7 @@
         /* ===== LAYOUT ===== */
         .section {
             padding: 60px 20px;
+            overflow-x: hidden;
         }
         .section--dark {
             background: var(--dark);
@@ -141,6 +144,7 @@
         }
         .container {
             max-width: 1000px;
+            width: 100%;
             margin: 0 auto;
         }
 
@@ -369,6 +373,7 @@
             flex-direction: column;
             justify-content: center;
             padding: 80px 20px 60px;
+            overflow-x: hidden;
         }
         .hero-sub {
             color: #aaa;
@@ -558,6 +563,11 @@
         @media (max-width: 699px) {
             .patch--hide-mobile { display: none; }
             .nav-links { gap: 10px; }
+            .patch { max-width: 100%; box-sizing: border-box; white-space: normal; text-align: center; }
+            .hero-sub { font-size: var(--fs-small); }
+            .terminal pre { font-size: 11px; }
+            .cta-button { font-size: var(--fs-small); padding: 10px 16px; }
+            .section-title { font-size: 1.5rem; }
         }
     </style>
 </head>
